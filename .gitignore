@@ -5,4 +5,4 @@
 # User-specific stuff
 .idea
 *.class
-/target
+target/

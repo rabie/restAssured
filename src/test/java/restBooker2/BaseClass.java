@@ -8,6 +8,8 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
+
+
     protected RequestSpecification requestSpecification = null;
     protected ResponseSpecification responseSpecification = null;
     @BeforeClass
