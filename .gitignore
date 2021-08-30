@@ -4,3 +4,5 @@
 
 # User-specific stuff
 .idea
+target/test-classes/restBooker2/*.class
+target/test-classes/restfulbooker/*.class

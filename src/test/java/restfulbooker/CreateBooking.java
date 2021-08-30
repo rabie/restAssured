@@ -41,6 +41,7 @@ public class CreateBooking {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
 
+        String response =
         RestAssured
             .given()
                 .baseUri("https://restful-booker.herokuapp.com/")
@@ -50,7 +51,10 @@ public class CreateBooking {
             .when()
                 .post()
             .then()
-                .statusCode(200);
+                .extract()
+                .body()
+                .asPrettyString();
+        System.out.println(response);
 
     }
 }
