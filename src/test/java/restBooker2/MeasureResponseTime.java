@@ -2,6 +2,7 @@ package restBooker2;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -39,5 +40,7 @@ public class MeasureResponseTime {
         System.out.println("timeInS = " + timeInS);
         Long timeInS2 = response.getTimeIn(TimeUnit.SECONDS);
         System.out.println("timeInS2 = " + timeInS2);
+
+        response.then().time(Matchers.lessThan(3000L));
     }
 }
