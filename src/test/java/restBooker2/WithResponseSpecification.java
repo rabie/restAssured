@@ -2,7 +2,6 @@ package restBooker2;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 public class WithResponseSpecification extends BaseClass{

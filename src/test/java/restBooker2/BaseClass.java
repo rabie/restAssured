@@ -8,15 +8,14 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
-
-
     protected RequestSpecification requestSpecification = null;
     protected ResponseSpecification responseSpecification = null;
     @BeforeClass
     public void setUp(){
         requestSpecification = RestAssured
                                 .given()
-                                .baseUri("https://restful-booker.herokuapp.com/");
+                                .baseUri("https://restful-booker.herokuapp.com/")
+                                .log().all();
         responseSpecification = RestAssured.expect()
                                         .statusCode(200)
                                         .contentType(ContentType.JSON)
